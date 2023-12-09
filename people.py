@@ -16,7 +16,7 @@ for user in column_data:
     peopleUrl= "https://people.wdf.sap.corp/profiles/"+eid+"#?profile_tab=organization"
     driver.get(peopleUrl)  # 打开网站登录页面
     cookies = driver.get_cookies()
-      for cookie in cookies:
+    for cookie in cookies:
         driver.add_cookie(cookie)
     driver.refresh()
     manager = driver.find_element(By.CSS_SELECTOR, "body > div.wrap > div.search-container.sort_by_score.ready > div.content > div > div > div > div.main-profile-info > div > div.inline_content > div.info.search-info > div.container.mobile-more-less > div.row.collection.corporate > div.col-lg-2.col-md-4.col-sm-4.col-xs-12.customize.manager_link > div > div:nth-child(2) > span.value > a:nth-child(1)")
